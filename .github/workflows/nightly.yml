@@ -25,6 +25,7 @@ jobs:
       shell: bash
       working-directory: ${{ runner.workspace }}
       run: |
+        sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*
         sudo xcode-select -s "/Applications/Xcode_12.3.app"
         rustup toolchain install nightly
         # Usage: build_target [target_platform] [save_destination]
